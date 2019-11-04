@@ -6,7 +6,27 @@ using namespace std;
 
 void Mario(int height, char* constraction)
 {
-	
+	if (constraction[0] == '0')
+	{
+		int temp = 0;
+		for (int i = 0; i < height; i++)
+		{
+			temp++;
+			for (int j = 0; j < height; j++)
+			{
+				if (temp + j == height)
+				{
+					for (int l = 0; l < temp; l++)
+					{
+						cout << "#";
+					}
+				}
+				else
+					cout << " ";
+			}
+			cout << endl;
+		}
+	}
 }
 
 	
