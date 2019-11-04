@@ -31,6 +31,15 @@ int main()
 			}
 			break;
 		}
+
+	cout << "Enter constraction: ";
+	cin >> constraction;
+	while ((constraction[0] != '0' && constraction[0] != '1') && (constraction[0] != 'y' && constraction[1] != 'e' && constraction[2] != 's'))
+	{
+		cout << "Error.Enter corect constractions: ";
+		cin >> constraction;
+	}
+	Mario(height, constraction);
 	return 0;
 }
 
