@@ -3,32 +3,8 @@
 #include <cstdlib>
 
 using namespace std;
-
-void Mario(int height, char* constraction)
-{
-	if (constraction[0] == '0')
-	{
-		int temp = 0;
-		for (int i = 0; i < height; i++)
-		{
-			temp++;
-			for (int j = 0; j < height; j++)
-			{
-				if (temp + j == height)
-				{
-					for (int l = 0; l < temp; l++)
-					{
-						cout << "#";
-					}
-				}
-				else
-					cout << " ";
-			}
-			cout << endl;
-		}
-	}
-}
-
+/*My Program*/
+void Mario(int height, char* constraction);
 	
 int main()
 {
@@ -61,5 +37,58 @@ int main()
 	}
 	Mario(height, constraction);
 	return 0;
+}
+
+void Mario(int height, char* constraction)
+{
+	if (constraction[0] == '0')
+	{
+		int temp = 0;
+		for (int i = 0; i < height; i++)
+		{
+			temp++;
+			for (int j = 0; j < height; j++)
+			{
+				if (temp + j == height)
+				{
+					for (int l = 0; l < temp; l++)
+					{
+						cout << "#";
+					}
+				}
+				else
+					cout << " ";
+			}
+			cout << endl;
+		}
+	}
+
+	if (constraction[0] == '1' || (constraction[0] == 'y' && constraction[1] == 'e' && constraction[2] == 's'))
+	{
+		int temp = 0;
+		height += 1;
+		for (int i = 0; i < height; i++)
+		{
+			temp++;
+
+			for (int j = 0; j < height; j++)
+			{
+				if (i + j == height)
+				{
+					for (int l = 1; l < temp * 2; l++)
+					{
+						if (l == i + 1)
+							cout << " ";
+						else
+							cout << "#";
+					}
+				}
+
+				else
+					cout << " ";
+			}
+			cout << endl;
+		}
+	}
 }
 
